@@ -1,3 +1,13 @@
+Katja - the folks at Arable marks sent me a bunch of stuff on drop box in response to my request so we can see the data from the sensors.. which maybe I can share with you because this READ ME file that I've copied here is like a foreign language to me...  Does it speak to you?  Ryan hasn't really dealt with this language and stuff.  I'm hoping once a system is set up that we can all access more easily?
+
+I'll share folder with you.
+
+Thank you.
+
+Lisa
+
+
+
 README
 
 Quickstart if you already have python in your system
@@ -53,6 +63,17 @@ Add physics.py to /lib
 >ipynb  
 
 A new window should open in your browser!  Update your username, password, and tenant and start playing with data!
+
+
+
+
+Do you have conda installed on your Mac? If so, you can try these instructions before/while we meet: https://docs.google.com/document/d/1LYfJvI_4nHXE9SvB-T_Et7mmQsSCQQrrHqEoR6lcVwE/edit?usp=sharing. 
+
+
+ccber-research@ucsb.edu then the password is greenresearch33  and UCSB is the tenant/company name 
+
+UCSB and CCBER accounts
+
 
 ----------------------------------
 Simple script for arable sensors

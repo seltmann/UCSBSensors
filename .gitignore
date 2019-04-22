@@ -3,3 +3,6 @@
 .bashrc
 .ipynb_checkpoints/
 __pycache__/
+sensors.py
+*.csv
+.DS_Store
