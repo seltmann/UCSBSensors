@@ -6,3 +6,4 @@ __pycache__/
 sensors.py
 *.csv
 .DS_Store
+Katjas_Script.py
