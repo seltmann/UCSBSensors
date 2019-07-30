@@ -8,6 +8,7 @@ Put "physics.py" in a suitable place in your path to access these helpful functi
 
 The notebook .ipynb can be opened in the Jupyter environment.  
 
+<<<<<<< HEAD
 Arable uses homebrew Python version 2.7 but I have used it with python 3 ok so far 
 
 sensor_includes.py needs to include your password information with variables:
@@ -20,5 +21,64 @@ tenant_ccber = 'account tenant'
 
 ----------------------------------
 Simple script for arable sensors
+=======
+Arable uses homebrew Python version 2.7
+
+
+=====================
+How I setup my system on OSX
+Use your Terminal: drag /Applications/Utilities/Terminal over to your sidebar
+Install Sublime text: http://www.sublimetext.com/
+
+Make some changes to your environment:
+In the terminal type "open .bashrc" and add the following text, then save and close.
+
+alias ipy="jupyter notebook"
+
+# set SublimeText as default editor
+export EDITOR='subl -w'
+
+In the terminal type ". .bashrc"
+
+In the terminal type "subl .bash_profile" and add the following text, then save and close.
+
+#source .bashrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+In the terminal type ". .bash_profile"
+
+Install Homebrew: https://brew.sh/
+
+Install python:
+
+>brew install python@2
+
+Install Jupiter:
+
+>brew install jupyter
+
+Find a suitable folder and copy the ipynb over to it.
+>mkdir lib 
+Add physics.py to /lib
+>ipynb  
+
+A new window should open in your browser!  Update your username, password, and tenant and start playing with data!
+
+----------------------------------
+Simple script for arable sensors
 
 https://docs.google.com/document/d/12ucWe86dmpKJg_aTPuzMD5WTpVVHQOEvRc1OAAIf9wE/edit?usp=sharing
+
+-----------------------------
+To use on CCBER Mac:
+1. Log into the CCBER admin account
+2. navigate to the ~/Documents/UCSBSensors folder
+3. Open terminal and run this command: source activate arable_query
+4. In the terminal run the command: python sensors.py
+
+>>>>>>> d55478f535374c7f53d02b443c6589247f1710c6
+
