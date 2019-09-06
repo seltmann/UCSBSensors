@@ -1,0 +1,48 @@
+<form method=post action="">
+<table>
+   {% for field in form %}
+       <tr>
+       <td>{{ field.name }}</td><td>{{ field }}</td>
+       <td>{{ field.label }}</td>
+       </tr>
+    {% endfor %}
+</table>
+<p><input type=submit value=Submit></form></p>
+<p><table>
+	<tr>
+	<td>< input type = "checkbox" name="data_type" value="hourly" checked ></td>
+	<td>< input type = "checkbox" name="data_type" value="daily" checked ></td>
+	<td>< input type = "checkbox" name="data_type" value="soil" checked ></td>
+	<td>< input type = "checkbox" name="data_type" value="calibrated" checked ></td>
+	</tr>
+</table></p>
+
+<p><table>
+	<tr>
+	<td>< input type = "checkbox" name="timeframe" value="monthly" checked ></td>
+	<td>< input type = "checkbox" name="timeframe" value="yearly" checked ></td>
+	<td>< input type = "checkbox" name="timeframe" value="all time" checked ></td>
+	</tr>
+</table></p>
+
+<p></table>
+	<tr>
+	<td>< input type = "checkbox" name="sensor" value="1" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="2" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="3" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="4" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="5" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="6" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="7" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="8" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="9" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="10" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="11" checked ></td>
+	<td>< input type = "checkbox" name="sensor" value="12" checked ></td>
+	</tr>
+</table></p>
+<p>
+{% if result != None %}
+<img src="{{ result }}" width=500>
+{% endif %}
+</p>
