@@ -1,5 +1,4 @@
 # Data Columns in Each Dataset
-
 Calibrated_Data_Columns = {
     "B1dw"         : "Spectrometer data Bands 1 downwelling",
     "B1uw"         : "Spectrometer data Bands 1 upwelling",
