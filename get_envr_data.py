@@ -13,7 +13,7 @@ def job():
     os.system('runipy make_csv_files.ipynb')
 
 
-schedule.every().saturday.at("17:55").do(job)
+schedule.every().thursday.at("17:04").do(job)
 
 while True:
     schedule.run_pending()
