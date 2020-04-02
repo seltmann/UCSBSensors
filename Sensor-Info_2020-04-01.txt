@@ -1,0 +1,12 @@
+,Date Created,Flags,ID,Location,n
+0,2019-03-12 23:08:06,['Orientation'],A000546,NCOS-2017-Stipa,1
+1,2019-02-05 21:44:10,['Orientation'],A000465,CampusPtIceplant,2
+2,2019-02-05 23:19:19,"['Battery', 'Orientation']",A000229,Lagoon-AnnualGrass,3
+3,2019-02-06 00:43:30,['Orientation'],A000536,Lagoon-2016-Burn,4
+4,2019-03-18 22:04:27,['Orientation'],A000563,NCOS-Stipa-Loam,5
+5,2019-03-18 18:45:32,['Orientation'],A000507,BlackLakeGentleSo,6
+6,2019-02-05 23:45:25,"['Orientation', 'Thermistor']",A000318,Lagoon-CoastalSage,7
+7,2019-03-12 22:47:11,"['Orientation', 'Thermistor']",A000466,NCOS-Saltmarsh,8
+8,2019-03-12 23:12:28,['Orientation'],A000369,SaltMarsh-MilkVetch,9
+9,2019-03-20 19:32:35,['Orientation'],A000522,Philips-66-Nipomo,10
+10,2019-03-19 19:11:54,"['Orientation', 'Thermistor']",A000513,BlackLakeN-Facing,11
