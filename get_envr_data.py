@@ -9,10 +9,10 @@ import time
     
 def job():
     print("I am doing this job!")
-    os.system('runipy get_sensor_data.ipynb')
+    #os.system('runipy get_sensor_data.ipynb')
     os.system('runipy make_csv_files.ipynb')
 
-schedule.every().day.at("17:40").do(
+schedule.every().day.at("9:40").do(
 job)
 
 while True:
