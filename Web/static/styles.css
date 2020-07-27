@@ -1,0 +1,32 @@
+div.body {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  padding: 7.5%;
+  vertical-align: center;
+  background-color: #e3c2f9;
+}
+
+form, label, p {
+  font-size: 1rem;
+  font-family: sans-serif, helvetica;
+  padding-right: 10px;
+  line-height: 2;
+  background-color: #e3c2f9;
+}
+
+button,
+select,
+input {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+input[type=button] {
+  border-radius: 2px;
+  border-width: 1px;
+  position: relative;
+  left: 5px;
+}

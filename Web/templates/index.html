@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+<title>Page Title</title>
+</head>
+<body>
+
+<form>
+  Get
+  <select id="data_types_list" ></select>
+  data collected by
+  <select id="sensor_list" ></select>
+   from
+  <select id="years_list_start" ></select>
+  <br>
+  <center><input type="button" onclick="getFile()" value="GO" ></center>
+  </form>
+
+  <p id="message" ></p>
+  <p id="folder" ></p>
+  <p id="test" ></p>
+
+
+<script>
+    var sensors, habitats, sites, years, text;
+
+    sensors = ['CL - Coastal-Sage-Scrub', 'CL - Campus-Pt-Iceplant', 'NCOS - 2017-Stipa-Drillseed', 'NCOS - North-Slope-Oaks', 'NLP - NLP-Philips-66', 'NLP - Black-Lake-Gentle-S', 'NLP - Black-Lake-N-Facing'];
+
+    habitats = ['Campus-Lagoon', 'Campus-Lagoon', 'North-Campus-Open-Space', 'North-Campus-Open-Space', 'Nipomo-Lupine-Project', 'Nipomo-Lupine-Project', 'Nipomo-Lupine-Project'];
+
+    sites = ['Coastal-Sage-Scrub', 'Campus-Pt-Iceplant', '2017-Stipa-Drillseed', 'North-Slope-Oaks', 'NLP-Philips-66', 'Black-Lake-Gentle-S', 'Black-Lake-N-Facing'];
+
+    sensors.forEach(myFunction);
+    document.getElementById("sensor_list").innerHTML = text;
+    text = "";
+
+    years = ['2020', '2019'];
+
+    years.forEach(myFunction);
+    document.getElementById("years_list_start").innerHTML = text;
+    text = "";
+
+    data_types = ['daily', 'hourly', 'soil'];
+    data_types.forEach(myFunction);
+    document.getElementById("data_types_list").innerHTML = text;
+
+    function myFunction(value) {
+      text += "<option value='" + value + "'>" + value + "</option>";
+    }
+
+
+    function getFile() {
+        var data_type = document.getElementById("data_types_list");
+        var data_type_text = data_type.options[data_type.selectedIndex].text;
+        var sensor = document.getElementById("sensor_list");
+        var sensor_text = sensor.options[sensor.selectedIndex].text;
+        var sensor_index = sensor.options[sensor.selectedIndex].index;
+        var habitat = habitats[sensor_index];
+        var site = sites[sensor_index];
+        var year_start = document.getElementById("years_list_start");
+        var year_start_text = year_start.options[year_start.selectedIndex].text;
+        document.getElementById("message").innerHTML = "Retrieving " + data_type_text + " data from " + sensor_text + " collected by " + year_start_text + " from the following folder:";
+        document.getElementById("folder").innerHTML = "Arable_Data/" + habitat + "/" + site + "/" + year_start_text + "/" + data_type_text + "/" + site + "_*_" + data_type_text + "_" + year_start_text + ".csv";
+        //window.location.href = "https://pastebin.com/dl/abaBC3Wa" // for now, it just downloads a random PasteBin file
+        var obj = new Object();
+        obj.Site = site;
+        obj.Habitat = habitat;
+        obj.Year = year_start_text;
+        obj.DataType = data_type_text;
+        //convert object to JSON string
+        var string = JSON.stringify(obj);
+        //convert string to JSON Object
+        console.log(JSON.parse(string));
+        $.ajax({
+            type: 'POST',
+            url: '{{ url_for('test') }}',
+            data: string,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8'
+        }).done(function (msg) {
+            console.log(msg);
+            console.log(msg.URL);
+            window.location.href = msg.URL;
+        });
+    }
+</script>
+</body>
+</html>
